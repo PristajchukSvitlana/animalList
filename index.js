@@ -15,18 +15,17 @@ function renderItems(arr) {
 
         newArr.forEach(el => {
             console.log(el)
-            currentStr = `
+            const currentStr = `
             <p>${el[0]}:${el[1]}</p>`
             console.log(currentStr)
             return newArr.push(currentStr) // add a created el for newArr
         }); //перебираємо масив
         console.log(newArr)
         return document.write(`<div>
-        ${newArr.join(``)}
-        </div>`
+            ${newArr.join(``)}
+            </div>`
         )
     }, 2000)
-
 
 }
 
