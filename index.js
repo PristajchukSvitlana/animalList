@@ -8,8 +8,8 @@ const animalsList = [
 //console.log(animalsList)
 
 function renderItems(arr) {
-    const newArr = JSON.parse(JSON.stringify(arr))
-    //console.log(arr) // створюємо  копію масиву
+    const newArr = (JSON.parse(JSON.stringify(arr)))
+    console.log(newArr) // створюємо  копію масиву
 
     setTimeout(() => {
 
@@ -18,14 +18,14 @@ function renderItems(arr) {
             currentStr = `
             <p>${el[0]}:${el[1]}</p>`
             console.log(currentStr)
-            return newArr.push(currentStr)
+            return newArr.push(currentStr) // add a created el for newArr
         }); //перебираємо масив
         console.log(newArr)
         return document.write(`<div>
         ${newArr.join(``)}
         </div>`
         )
-    }, 5000)
+    }, 2000)
 
 
 }
